@@ -17,7 +17,12 @@ class ViewController: UIViewController {
     
     @IBAction func tapButtonClicked(sender: AnyObject) {
         print("button clicked");
-        labelOutlet.text = "Hi  \(textField.text!)";
+        labelOutlet.text = "Hi \(textField.text!)!"
+        textField.resignFirstResponder()
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
