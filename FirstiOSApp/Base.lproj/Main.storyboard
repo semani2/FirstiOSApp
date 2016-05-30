@@ -33,14 +33,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGl-Z7-bTY">
                                 <rect key="frame" x="27" y="155" width="252" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="labelOutlet" destination="c8J-ji-68q" id="ahS-Fp-lcK"/>
-                        <outlet property="textField" destination="vGl-Z7-bTY" id="Tkd-uz-RiZ"/>
+                        <outlet property="myTextField" destination="vGl-Z7-bTY" id="wqN-jc-Ag5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

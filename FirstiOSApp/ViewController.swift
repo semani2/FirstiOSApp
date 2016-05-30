@@ -8,25 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var labelOutlet: UILabel!
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var myTextField: UITextField!
     
     @IBAction func tapButtonClicked(sender: AnyObject) {
         print("button clicked");
-        labelOutlet.text = "Hi \(textField.text!)!"
-        textField.resignFirstResponder()
+        labelOutlet.text = "Hi \(myTextField.text!)!"
+        myTextField.resignFirstResponder()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        myTextField.resignFirstResponder()
+        return false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        myTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
